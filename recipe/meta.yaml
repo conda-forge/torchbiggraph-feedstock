@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - torchbiggraph_config = torchbiggraph.config:main
     - torchbiggraph_eval = torchbiggraph.eval:main
@@ -50,6 +50,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - mxr-conda
     - agcopenhaver
     - oblute
     - rluria14

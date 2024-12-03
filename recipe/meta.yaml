@@ -25,10 +25,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - h5py
     - numpy
     - tqdm
@@ -38,7 +38,9 @@ requirements:
 test:
   imports:
     - torchbiggraph
-    
+  requires:
+    - python {{ python_min }}
+
 about:
   home: https://github.com/facebookresearch/PyTorch-BigGraph
   license: BSD-3-Clause  

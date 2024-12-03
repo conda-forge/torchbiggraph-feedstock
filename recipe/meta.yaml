@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   entry_points:
     - torchbiggraph_config = torchbiggraph.config:main
     - torchbiggraph_eval = torchbiggraph.eval:main
@@ -32,7 +32,7 @@ requirements:
     - h5py
     - numpy
     - tqdm
-    - pytorch-cpu
+    - pytorch
     - setuptools
 
 test:

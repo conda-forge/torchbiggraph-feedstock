@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   entry_points:
     - torchbiggraph_config = torchbiggraph.config:main
     - torchbiggraph_eval = torchbiggraph.eval:main
@@ -25,20 +25,23 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - h5py
     - numpy
     - tqdm
-    - pytorch-cpu
+    - pytorch
     - setuptools
 
 test:
   imports:
     - torchbiggraph
-    
+  requires:
+    - python {{ python_min }}
+
 about:
   home: https://github.com/facebookresearch/PyTorch-BigGraph
   license: BSD-3-Clause  
